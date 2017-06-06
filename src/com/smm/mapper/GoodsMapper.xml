@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.smm.dao.GoodsDao">
+
+	<select id="getAllGoods" resultType="com.smm.entity.GoodsEntity">
+		SELECT * FROM goods
+	</select>
+	
+	<select id="getSingleGoodsByID" parameterType="int" resultType="com.smm.entity.GoodsEntity">
+		SELECT * FROM goods
+		<where>
+			AND ID = #{ID}
+		</where>
+	</select>
+	
+	<insert id="addGoods" parameterType="com.smm.entity.GoodsEntity">
+		INSERT INTO goods VALUS(null,#{Name},#{Code},#{Price},#{Img},#{Status})
+	</insert>
+	
+    <delete id="delGoods" parameterType="int" >
+    	DELETE FROM goods
+    	<where>
+    		AND ID = #{ID}
+    	</where>
+    </delete>
+    
+</mapper>
