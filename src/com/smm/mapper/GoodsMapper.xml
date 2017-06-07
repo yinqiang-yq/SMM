@@ -17,7 +17,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<insert id="addGoods" parameterType="com.smm.entity.GoodsEntity">
-		INSERT INTO goods VALUS(null,#{Name},#{Code},#{Price},#{Img},#{Status})
+		INSERT INTO goods VALUES(null,#{Name},#{Code},#{Price},#{Img},#{Status})
 	</insert>
 	
     <delete id="delGoods" parameterType="int" >

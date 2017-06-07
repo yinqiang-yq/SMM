@@ -24,4 +24,13 @@ public class GoodsController {
 		return "qiangqiang";
 	}
 	
+	@RequestMapping("AddGoods")
+	@ResponseBody
+	public String addGoods(){
+		GoodsEntity goods = new GoodsEntity();
+		Integer i = goodsService.addGoods(goods);
+		System.out.println(i);
+		return i.toString();
+	}
+	
 }
