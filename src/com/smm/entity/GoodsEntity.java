@@ -2,6 +2,8 @@ package com.smm.entity;
 
 import java.math.BigDecimal;
 
+import net.sf.json.JSONObject;
+
 /**
  * 商品实体
  * @author yin
@@ -75,5 +77,11 @@ public class GoodsEntity {
 	}
 	public void setStatus(int status) {
 		Status = status;
+	}
+	
+	@Override
+	public String toString(){
+		
+		return JSONObject.fromObject(this).toString(); 
 	}
 }

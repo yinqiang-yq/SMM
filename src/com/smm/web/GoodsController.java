@@ -20,8 +20,8 @@ public class GoodsController {
 	@ResponseBody
 	public String getAllGoods(){
 		List<GoodsEntity> list = goodsService.getAllGoods();
-		System.out.println(list.size());
-		return "qiangqiang";
+		
+		return list.toString();
 	}
 	
 	@RequestMapping("AddGoods")
